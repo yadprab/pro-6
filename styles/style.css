@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --font: 'Kumbh Sans', sans-serif;
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+  padding: 4em 2em;
+  font-family: var(--font);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+#box {
+  display: none;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--Very-dark-grayish-blue);
+  display: none;
+}
+
+.faq--container {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.faq--container .img--section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq--container .img--section img:not(#box) {
+  position: relative;
+  top: -50px;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-position-x: 30px;
+  background-position-y: 95px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.answer--section {
+  padding: 1em;
+  max-width: 480px;
+}
+
+.answer--section .question {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px;
+      grid-template-columns: 1fr 20px;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.answer--section .question::after {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid;
+  width: 100%;
+  height: 100%;
+  bottom: -20px;
+  border-color: var(--Light-grayish-blue);
+}
+
+.answer--section article {
+  max-width: 480px;
+}
+
+.answer--section article h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--Very-dark-desaturated-blue);
+  cursor: pointer;
+}
+
+.answer--section article h2:hover {
+  color: var(--Soft-red);
+}
+
+.answer--section button {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  display: inline-block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.answer--section button svg {
+  pointer-events: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+footer {
+  margin-top: 4em;
+}
+
+@media screen and (min-width: 1100px) {
+  #box {
+    display: block;
+    position: absolute;
+    left: -100px;
+  }
+  .faq--container {
+    max-width: 900px;
+    height: 500px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .faq--container .img--section img:not(#box) {
+    position: relative;
+    left: -50px;
+    background-image: unset;
+  }
+  .faq--container .answer--section {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
