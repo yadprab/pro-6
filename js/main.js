@@ -13,16 +13,17 @@ function accordionFn(){
 function showFn(e) {
     e.preventDefault();
     const answer = document.querySelectorAll('p');
-    const answerArr = [...answer];
+ 
 
 
     //get parent 
     const parent = e.target.parentElement;
     const para = parent.querySelector('p');
    
+   
+  
+   para.classList.toggle('show');
 
-    answerArr.forEach(answers=>answers.classList.remove('show'))
-    para.classList.toggle('show');
     
     
     

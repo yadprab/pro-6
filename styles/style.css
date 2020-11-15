@@ -31,8 +31,8 @@ img {
 body {
   line-height: 1.5;
   padding: 4em 2em;
+  width: 100%;
   font-family: var(--font);
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,6 +97,19 @@ p {
   background-image: url(../images/bg-pattern-mobile.svg);
   background-position-x: 30px;
   background-position-y: 95px;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1 {
@@ -167,7 +180,18 @@ h1 {
 }
 
 footer {
+  width: 100%;
+  max-width: 480px;
   margin-top: 4em;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: white;
 }
 
 @media screen and (min-width: 1100px) {
@@ -178,19 +202,26 @@ footer {
   }
   .faq--container {
     max-width: 900px;
-    height: 500px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  .faq--container .img--section img:not(#box) {
-    position: relative;
-    left: -50px;
-    background-image: unset;
-  }
   .faq--container .answer--section {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .faq--container .img--section img:not(#box) {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: bottom -10px left 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
